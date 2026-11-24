@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rueda Sur Tornos · Centro de archivos</title>
+  <style>
+    :root {
+      --azul: #1f4e79;
+      --azul-claro: #d9e2f3;
+      --barro: #8b5e3c;
+      --fondo: #f5f3ef;
+      --texto: #222;
+      --borde: #d7d2c9;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Calibri, Segoe UI, Arial, sans-serif;
+      color: var(--texto);
+      background: var(--fondo);
+    }
+    header {
+      padding: 40px 24px 28px;
+      background: linear-gradient(135deg, var(--azul), #2f6f9f);
+      color: white;
+    }
+    .contenedor { max-width: 1100px; margin: 0 auto; }
+    h1 { margin: 0 0 6px; font-size: 32px; }
+    .eslogan { margin: 0 0 22px; font-style: italic; opacity: .9; }
+    .buscador {
+      width: 100%;
+      max-width: 520px;
+      padding: 12px 14px;
+      border: 0;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+    .nota { margin-top: 12px; font-size: 13px; opacity: .85; }
+    main { padding: 30px 24px 60px; }
+    section { margin-bottom: 34px; }
+    h2 {
+      color: var(--azul);
+      border-bottom: 2px solid var(--azul-claro);
+      padding-bottom: 8px;
+      font-size: 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+    }
+    .tarjeta {
+      background: white;
+      border: 1px solid var(--borde);
+      border-left: 5px solid var(--azul);
+      border-radius: 10px;
+      padding: 18px;
+      box-shadow: 0 2px 6px rgba(0,0,0,.05);
+    }
+    .tarjeta[data-tipo="PDF"] { border-left-color: var(--barro); }
+    .tarjeta[data-tipo="PY"] { border-left-color: #4f7942; }
+    .etiqueta {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: .08em;
+      color: white;
+      background: var(--azul);
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+    .tarjeta[data-tipo="PDF"] .etiqueta { background: var(--barro); }
+    .tarjeta[data-tipo="PY"] .etiqueta { background: #4f7942; }
+    h3 { margin: 0 0 8px; font-size: 17px; }
+    p { margin: 0 0 12px; font-size: 14px; line-height: 1.45; }
+    .meta { font-size: 12px; color: #666; margin-bottom: 14px; }
+    .acciones { display: flex; gap: 8px; flex-wrap: wrap; }
+    a.boton {
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 6px;
+      border: 1px solid var(--azul);
+      color: var(--azul);
+      background: white;
+    }
+    a.boton.principal { background: var(--azul); color: white; }
+    a.boton:hover { filter: brightness(.95); }
+    footer {
+      padding: 20px 24px;
+      text-align: center;
+      font-size: 12px;
+      color: #666;
+      border-top: 1px solid var(--borde);
+    }
+    .oculto { display: none !important; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="contenedor">
+      <h1>Rueda Sur Tornos</h1>
+      <p class="eslogan">Barro, acero y territorio</p>
+      <p>Centro de archivos del plan de negocio · MiPre 3° edición · Villa Mercedes, San Luis</p>
+      <input id="buscador" class="buscador" type="search" placeholder="Buscar por nombre, tema o contenido…" autocomplete="off">
+      <div class="nota">Los enlaces son relativos: si movés la carpeta completa, siguen funcionando.</div>
+    </div>
+  </header>
+
+  <main class="contenedor">
+    <section>
+      <h2>Entregables principales</h2>
+      <div class="grid">
+        <article class="tarjeta" data-tipo="DOC" data-search="plan de negocio resumen ejecutivo foda macroentorno microentorno bom gantt herramientas">
+          <span class="etiqueta">DOCX</span>
+          <h3>Plan de Negocio</h3>
+          <p>Documento completo con FODA, macroentorno, microentorno, segmentación, BOM, Gantt, herramientas, inversión, flujo de caja, riesgos y fuentes.</p>
+          <div class="meta">56,6 KB · Actualizado 24/11/2026 20:38</div>
+          <div class="acciones">
+            <a class="boton principal" href="RuedaSur_PlanDeNegocio.docx" target="_blank">Abrir</a>
+            <a class="boton" href="RuedaSur_PlanDeNegocio.docx" download>Descargar</a>
+          </div>
+        </article>
+
+        <article class="tarjeta" data-tipo="XLS" data-search="anexos cuadros planillas bom materiales gantt herramientas costos flujo inversion fuentes">
+          <span class="etiqueta">XLSX</span>
+          <h3>Anexos y cuadros</h3>
+          <p>23 planillas con resumen, FODA, proveedores, competencia, segmentación, costos, inversión, flujo a 18 meses, BOM, plan de trabajo, Gantt y herramientas.</p>
+          <div class="meta">35,5 KB · Actualizado 24/11/2026 20:38</div>
+          <div class="acciones">
+            <a class="boton principal" href="RuedaSur_Anexos_Cuadros.xlsx" target="_blank">Abrir</a>
+            <a class="boton" href="RuedaSur_Anexos_Cuadros.xlsx" download>Descargar</a>
+          </div>
+        </article>
+
+        <article class="tarjeta" data-tipo="PY" data-search="generar script actualizar docx xlsx python regenerar plan de negocio anexos">
+          <span class="etiqueta">PY</span>
+          <h3>Generador de archivos</h3>
+          <p>Script para reconstruir el DOCX y el XLSX. Ejecutar <code>python generar_ruedasur.py</code> desde esta carpeta.</p>
+          <div class="meta">Python · mismo contenido usado para la última actualización</div>
+          <div class="acciones">
+            <a class="boton principal" href="generar_ruedasur.py" target="_blank">Ver</a>
+            <a class="boton" href="generar_ruedasur.py" download>Descargar</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Documentos base del programa</h2>
+      <div class="grid">
+        <article class="tarjeta" data-tipo="PDF" data-search="cartilla modulo 1 mipre mipro programa credito beca etapas">
+          <span class="etiqueta">PDF</span>
+          <h3>Cartilla MiPre-MiPro</h3>
+          <p>Cartilla de la 3° edición: requisitos, lineamientos, beca, crédito y cronograma del programa.</p>
+          <div class="meta">523,6 KB · 10 páginas</div>
+          <div class="acciones">
+            <a class="boton principal" href="CartillaMod1_Mipre_Mipro%20(1).pdf" target="_blank">Abrir</a>
+            <a class="boton" href="CartillaMod1_Mipre_Mipro%20(1).pdf" download>Descargar</a>
+          </div>
+        </article>
+
+        <article class="tarjeta" data-tipo="PDF" data-search="modulo 2 foda macro entorno politico legal economico demografico tecnologico sociocultural natural">
+          <span class="etiqueta">PDF</span>
+          <h3>Módulo 2 · FODA y macroentorno</h3>
+          <p>Marco teórico y ejemplos para matriz FODA, estrategias y análisis de las seis fuerzas del entorno.</p>
+          <div class="meta">2,0 MB · 12 páginas</div>
+          <div class="acciones">
+            <a class="boton principal" href="M%C3%B3dulo%202%20-%20AN%C3%81LISIS%20FODA%20Y%20MACRO%20ENTORNO.pdf" target="_blank">Abrir</a>
+            <a class="boton" href="M%C3%B3dulo%202%20-%20AN%C3%81LISIS%20FODA%20Y%20MACRO%20ENTORNO.pdf" download>Descargar</a>
+          </div>
+        </article>
+
+        <article class="tarjeta" data-tipo="PDF" data-search="modulo 3 micro entorno porter proveedores competencia sustitutos clientes segmentacion buyer persona">
+          <span class="etiqueta">PDF</span>
+          <h3>Módulo 3 · Microentorno y segmentación</h3>
+          <p>Marco teórico de barreras de ingreso, poder de negociación, competencia, clientes y segmentación.</p>
+          <div class="meta">9,3 MB · 23 páginas</div>
+          <div class="acciones">
+            <a class="boton principal" href="M%C3%B3dulo%203%20-%20AN%C3%81LISIS%20DEL%20MICRO%20ENTORNO%20Y%20SEGMENTACION.pdf" target="_blank">Abrir</a>
+            <a class="boton" href="M%C3%B3dulo%203%20-%20AN%C3%81LISIS%20DEL%20MICRO%20ENTORNO%20Y%20SEGMENTACION.pdf" download>Descargar</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Accesos rápidos</h2>
+      <div class="grid">
+        <article class="tarjeta" data-tipo="DOC" data-search="resumen ejecutivo una pagina presentacion mentor">
+          <span class="etiqueta">DOCX</span>
+          <h3>Dentro del plan</h3>
+          <p>El resumen ejecutivo y la ficha del emprendimiento están al inicio del documento principal.</p>
+          <div class="meta">Secciones 1 y 2</div>
+          <div class="acciones">
+            <a class="boton principal" href="RuedaSur_PlanDeNegocio.docx" target="_blank">Abrir plan</a>
+          </div>
+        </article>
+
+        <article class="tarjeta" data-tipo="XLS" data-search="herramientas taller soldadora taladro mechas amoladora gantt bom materiales">
+          <span class="etiqueta">XLSX</span>
+          <h3>Hoja de herramientas y Gantt</h3>
+          <p>Acceso directo al archivo de cuadros, donde están las hojas <code>Herramientas_Taller</code>, <code>BOM_Materiales</code> y <code>Gantt_Fabricacion</code>.</p>
+          <div class="meta">23 hojas</div>
+          <div class="acciones">
+            <a class="boton principal" href="RuedaSur_Anexos_Cuadros.xlsx" target="_blank">Abrir cuadros</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Rueda Sur Tornos · Centro de archivos local · Generado el 24/11/2026
+  </footer>
+
+  <script>
+    const buscador = document.getElementById('buscador');
+    const tarjetas = Array.from(document.querySelectorAll('.tarjeta'));
+    buscador.addEventListener('input', () => {
+      const texto = buscador.value.toLowerCase().trim();
+      tarjetas.forEach(tarjeta => {
+        const contenido = (tarjeta.dataset.search + ' ' + tarjeta.textContent).toLowerCase();
+        tarjeta.classList.toggle('oculto', texto !== '' && !contenido.includes(texto));
+      });
+    });
+  </script>
+</body>
+</html>
